@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html{
+    font-family: sans-serif;
+}
+
 body{
     background-color: black;
     margin-inline: 10px;
@@ -13,14 +17,12 @@ body{
     height: 200px;
     width: calc( 100% / 7 - 20px );
     position: relative;
-
 }
 
 img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+    width: 100%;
+    display: block;    
+}
 
 
 .icon-top{
@@ -35,7 +37,6 @@ img {
 
 
 .container{
-    border: 1px solid lime;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -63,29 +64,48 @@ img {
     right: 0;
 }
 
-.foot-container{
+.name{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(34, 34, 34, .7);
+    padding: 5px 5px;
+    color: white;
+}
+
+.container-foot{
+    color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 100px;
-    border: 1px dashed lime;
+    height: 50px;
     position: relative;
+    
 }
 
-.icon-left{
+.container-footer-left{
     display: flex;
-    border: 1px solid red;
-    width: 100px;
+    flex-direction: row;
+    gap: 20px;
 }
 
-.icon-center{
+.icon{
+    width: calc( 100 / 3 );
+    height: 100px;
+    gap: 10px;
     display: flex;
-    border: 1px solid red;
-    width: 100px;
+    flex-direction: column;
+    position: relative;
+    color: white;
+    justify-content: center;
 }
 
-.icon-right{
+.icon > a {
+    color: white;
+}
+
+.container-footer-center{
     display: flex;
-    border: 1px solid red;
-    width: 100px;
+    flex-direction: row;
+    gap: 20px;
 }
